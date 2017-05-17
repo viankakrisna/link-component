@@ -1,5 +1,5 @@
 import React from 'react';
-export history from './history';
+export {default as history} from './history';
 
 export default function Link({ to, ...props }) {
   return (

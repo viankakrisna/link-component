@@ -1,5 +1,5 @@
 import React from 'react';
-export {default as history} from './history';
+import history from './history';
 
 export default function Link({ to, ...props }) {
   return (
@@ -9,10 +9,12 @@ export default function Link({ to, ...props }) {
       onClick={e => {
         e.preventDefault();
         history.push(to);
-        if (typeof props.onClick === 'function'){
-          props.onClick()
+        if (typeof props.onClick === 'function') {
+          props.onClick();
         }
       }}
     />
   );
 }
+
+export { history };
